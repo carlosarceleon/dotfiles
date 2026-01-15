@@ -1,0 +1,14 @@
+autologin.canonical_username="carlosarceleon"
+autologin.username="carlosarceleon"
+autologin.blob="Flo4kRHMCliKiXhzZN9wvDdOSIxPEBcZK2hFmcInDcfIA6F5K3y6ImHPZ+DmLtyEat1/uOMLCwiA95cbYcYsTQl+KfCGH1LB+IUIbPiFAyYU2x4WT4tGj/7f0UKcP+NL2vhRSMO83iPT67lSDk5gJuTLeiXMPQDSXRusUrhsLvFzxSSiEVnrDJ/qmgrB/t8NXwVsy5sC6GR4N3ICXeQJuK+tGNYrv8aIVa0tIjxJZI9F23MagESJRz8a2jTbfcFmTvRQJzYLgKpgcQjz89Ib9g=="
+autologin.saved_credentials="{\"carlosarceleon\":[\"carlosarceleon\",\"Flo4kRHMCliKiXhzZN9wvDdOSIxPEBcZK2hFmcInDcfIA6F5K3y6ImHPZ+DmLtyEat1/uOMLCwiA95cbYcYsTQl+KfCGH1LB+IUIbPiFAyYU2x4WT4tGj/7f0UKcP+NL2vhRSMO83iPT67lSDk5gJuTLeiXMPQDSXRusUrhsLvFzxSSiEVnrDJ/qmgrB/t8NXwVsy5sC6GR4N3ICXeQJuK+tGNYrv8aIVa0tIjxJZI9F23MagESJRz8a2jTbfcFmTvRQJzYLgKpgcQjz89Ib9g==\"]}"
+app.window.state.saved=true
+app.window.position.width=1752
+es.send-on-startup=true
+core.clock_delta=0
+app.window.position.x=3517
+app.window.position.saved=true
+app.window.position.height=1023
+app.window.position.y=387
+storage.last-location="/home/carlos/.cache/spotify/Storage"
+app.last-launched-version="1.2.77.358.g4339a634"

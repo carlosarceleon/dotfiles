@@ -1,0 +1,99 @@
+# SSH Private Keys
+ssh/.ssh/id_*
+ssh/.ssh/*.pem
+ssh/.ssh/*.key
+
+# Docker credentials and build cache (400+ files)
+docker/.docker/config.json
+docker/.docker/buildx/
+docker/.docker/.token_seed
+docker/.docker/.token_seed.lock
+
+# VS Code - synced via account (1.6GB, 3600+ files)
+dev-tools/.config/Code/
+
+# Google Cloud credentials and tokens
+dev-tools/.config/gcloud/credentials.db
+dev-tools/.config/gcloud/access_tokens.db
+dev-tools/.config/gcloud/application_default_credentials.json
+dev-tools/.config/gcloud/legacy_credentials/
+
+# Rclone with OAuth tokens
+apps/.config/rclone/rclone.conf
+
+# Binaries and AppImages in scripts (2.2GB, 20k+ files)
+scripts/bin/*.AppImage
+scripts/bin/blender-*/
+scripts/bin/zig-*/
+scripts/bin/*.deb
+scripts/bin/*.rpm
+scripts/bin/*.tar.gz
+scripts/bin/*.zip
+scripts/bin/oh-my-posh
+
+# Shell completion cache
+**/.zcompdump*
+**/.zsh_sessions/
+
+# History files
+**/*_history
+**/.lesshst
+
+# Runtime and cache
+**/.cache/
+**/Cache/
+**/cache/
+**/*.log
+**/*.zwc
+
+# Application storage and state
+**/GPUCache/
+**/Service Worker/
+**/WebStorage/
+**/IndexedDB/
+**/Local Storage/
+**/Session Storage/
+
+# Editor backup files
+**/*~
+**/*.swp
+**/*.swo
+**/.*.swp
+
+# Python
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+
+# Node
+**/node_modules/
+
+# Discord - entire directory is runtime/modules (1800+ files)
+# Keep only settings.json if you want to track user preferences
+apps/.config/discord/
+
+# GIMP - user preferences and plugins
+creative/.config/GIMP/
+
+# 3D Printing slicers - mostly plugins/modules/generated files (1500+ files)
+# Keep only .conf files for actual user settings
+creative/.config/BambuStudio/cache/
+creative/.config/BambuStudio/log/
+creative/.config/BambuStudio/ota/
+creative/.config/BambuStudio/track/
+creative/.config/BambuStudio/hms/
+creative/.config/BambuStudio/plugins/
+creative/.config/BambuStudio/printers/
+creative/.config/BambuStudio/system/
+creative/.config/BambuStudio/user/
+creative/.config/OrcaSlicer/cache/
+creative/.config/OrcaSlicer/log/
+creative/.config/OrcaSlicer/ota/
+creative/.config/OrcaSlicer/plugins/
+creative/.config/OrcaSlicer/printers/
+creative/.config/OrcaSlicer/system/
+creative/.config/OrcaSlicer/user/
+
+# OS files
+**/.DS_Store
+**/Thumbs.db

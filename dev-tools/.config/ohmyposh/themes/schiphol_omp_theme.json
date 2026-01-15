@@ -1,0 +1,91 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "background": "#384A4D",
+          "foreground": "#ffffff",
+          "style": "powerline",
+          "template": "{{ if .WSL }}WSL at{{ end }} {{.Icon}} ",
+          "type": "os"
+        },
+        {
+          "background": "#CDE4F1",
+          "foreground": "#384A4D",
+          "powerline_symbol": "\ue0b0",
+          "options": {
+            "style": "folder",
+            "max_depth": 3
+          },
+          "style": "powerline",
+          "template": " {{ .Path }} ",
+          "type": "path"
+        },
+        {
+          "background": "#928374",
+          "background_templates": [
+            "{{ if or (.Working.Changed) (.Staging.Changed) }}#FE7B04{{ end }}",
+            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#FE7B04{{ end }}",
+            "{{ if gt .Ahead 0 }}#CDE4F1{{ end }}",
+            "{{ if gt .Behind 0 }}#CDE4F1{{ end }}"
+          ],
+          "foreground": "#384A4D",
+          "leading_diamond": "\ue0b6",
+          "powerline_symbol": "\ue0b0",
+          "options": {
+            "branch_max_length": 15,
+            "fetch_status": true
+          },
+          "style": "powerline",
+          "template": " {{ .HEAD }}{{ if .Working.Changed }} +{{ .Working.Added }} ~{{ .Working.Modified }} -{{ .Working.Deleted }}{{ end }} ",
+          "trailing_diamond": "\ue0b4",
+          "type": "git"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "right",
+      "segments": [
+        {
+          "type": "python",
+          "background": "#C6BA73",
+          "foreground": "#384A4D",
+          "powerline_symbol": "\ue0b2",
+          "leading_diamond": "\ue0b6",
+          "trailing_diamond": "\ue0b4",
+          "options": {
+            "display_mode": "context",
+            "fetch_virtual_env": true
+          },
+          "style": "diamond",
+          "template": " \ue73c {{ .Venv }} "
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#CDE4F1",
+          "style": "plain",
+          "template": "❯ ",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "transient_prompt": {
+    "background": "transparent",
+    "foreground": "#CDE4F1",
+    "template": "❯ "
+  },
+  "console_title_template": "{{ .Folder }}",
+  "final_space": true,
+  "version": 4
+}

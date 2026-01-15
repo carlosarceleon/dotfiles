@@ -1,0 +1,69 @@
+theme = Teerb
+
+adjust-cell-height = 10%
+command = /bin/zsh -c "tmux new -A -s work"
+copy-on-select = true
+font-family = "TX-02"
+font-size = 10
+font-thicken = true
+mouse-hide-while-typing = true
+
+# window-decoration=true
+# window-padding-y = 0
+# window-padding-x = 0
+# window-padding-color = extend
+# window-padding-balance = true
+# window-save-state = always
+window-inherit-working-directory = true
+
+## To delete from the current position to the start of the line
+#keybind = ctrl+backspace=esc:w
+#
+## TMUX integration considering that my leader key is ctrl + b
+#
+## Go to the N window in tmux (Ctrl+b+number)
+#keybind = alt+1=text:\x02\x31
+#keybind = alt+2=text:\x02\x32
+#keybind = alt+3=text:\x02\x33
+#keybind = alt+4=text:\x02\x34
+#keybind = alt+5=text:\x02\x35
+#keybind = alt+6=text:\x02\x36
+#keybind = alt+7=text:\x02\x37
+#keybind = alt+8=text:\x02\x38
+#keybind = alt+9=text:\x02\x39
+#keybind = ctrl+shift+up=scroll_page_up
+#keybind = ctrl+shift+down=scroll_page_down
+#
+## New tmux window (Ctrl+b+c)
+#keybind = alt+t=text:\x02\x63
+#
+## Close tmux pane (Ctrl+b+x)
+#keybind = alt+w=text:\x02\x78
+#
+## Switch to a window using tmux-fzf (Ctrl+b+w)
+#keybind = alt+p=text:\x02\x77
+#
+## Rename a tmux window (Ctrl+b+,)
+#keybind = alt+r=text:\x02\x2c
+#
+## Go to the previous tmux window (Ctrl+b+p)
+#keybind = alt+h=text:\x02\x70
+#
+## Go to the next tmux window (Ctrl+b+n)
+#keybind = alt+l=text:\x02\x6e
+#
+## Split the window horizontally (Ctrl+b+")
+#keybind = alt+minus=text:\x02\x22
+#
+## Split the window vertically (Ctrl+b+%)
+#keybind = alt+backslash=text:\x02\x25
+#
+## Toggle pane zoom (Ctrl+b+z)
+#keybind = alt+z=text:\x02\x7a
+#
+## Move tmux window to the left (Alt+i, custom keybind)
+#keybind = alt+i=text:\x1bi
+#
+## Move tmux window to the right (Alt+o, custom keybind)
+#keybind = alt+o=text:\x1bo
+

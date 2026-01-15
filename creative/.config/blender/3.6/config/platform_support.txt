@@ -1,0 +1,1 @@
+{Intel/Mesa Intel(R) Graphics (ADL GT2)/4.6 (Core Profile) Mesa 23.2.1-1ubuntu3.1~22.04.2}=SUPPORTED

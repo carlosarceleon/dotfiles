@@ -1,0 +1,17 @@
+# Ignore files that should not be stowed
+
+# Cache files
+*.zwc
+.zcompdump*
+
+# Editor temporary files
+*~
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
