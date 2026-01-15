@@ -97,3 +97,4 @@ creative/.config/OrcaSlicer/user/
 # OS files
 **/.DS_Store
 **/Thumbs.db
+desktop/.config/dconf/user

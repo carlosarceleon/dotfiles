@@ -1,14 +1,33 @@
 # Initialize zplug
 source /usr/share/zplug/init.zsh
 
+# History Configuration
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt APPEND_HISTORY          # Append to history file, don't overwrite
+setopt SHARE_HISTORY           # Share history between all sessions
+setopt HIST_EXPIRE_DUPS_FIRST  # Expire duplicate entries first
+setopt HIST_IGNORE_DUPS        # Don't record an entry that was just recorded
+setopt HIST_IGNORE_ALL_DUPS    # Delete old recorded entry if new entry is duplicate
+setopt HIST_FIND_NO_DUPS       # Don't display duplicates during search
+setopt HIST_IGNORE_SPACE       # Don't record entries starting with space
+setopt HIST_SAVE_NO_DUPS       # Don't write duplicates to history file
+setopt HIST_REDUCE_BLANKS      # Remove superfluous blanks before recording
+setopt INC_APPEND_HISTORY      # Write to history file immediately, not when shell exits
+
 # Load plugins with zplug
 zplug "plugins/git", from:oh-my-zsh
 zplug "jeffreytse/zsh-vi-mode"
-zplug "zsh-users/zsh-autosuggestions"
-zplug "zsh-users/zsh-syntax-highlighting", defer:2
+zplug "zsh-users/zsh-completions"
+zplug "marlonrichert/zsh-autocomplete"
+zplug "Aloxaf/fzf-tab"
+zplug "zdharma-continuum/fast-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-history-substring-search"
 zplug "agkozak/zsh-z"
 zplug "junegunn/fzf"
+zplug "lukechilds/zsh-nvm"
+zplug "romkatv/powerlevel10k", as:theme, depth:1
 
 # Install plugins if not installed
 if ! zplug check; then
@@ -17,6 +36,9 @@ fi
 
 # Load plugins
 zplug load
+
+# Load Powerlevel10k configuration
+[[ ! -f ~/.dotfiles/zsh/.p10k.zsh ]] || source ~/.dotfiles/zsh/.p10k.zsh
 
 # Bind keys for history-substring-search
 bindkey '^[[A' history-substring-search-up
@@ -46,10 +68,3 @@ alias ls='ls --color=auto'
 alias ll='ls -lh'
 alias la='ls -lah'
 alias grep='grep --color=auto'
-
-eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/themes/schiphol_omp_theme.json)"
-
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
