@@ -14,7 +14,6 @@ HISTSIZE=10000
 SAVEHIST=10000
 setopt APPEND_HISTORY          # Append to history file, don't overwrite
 setopt SHARE_HISTORY           # Share history between all sessions
-setopt HIST_EXPIRE_DUPS_FIRST  # Expire duplicate entries first
 setopt HIST_IGNORE_DUPS        # Don't record an entry that was just recorded
 setopt HIST_IGNORE_ALL_DUPS    # Delete old recorded entry if new entry is duplicate
 setopt HIST_FIND_NO_DUPS       # Don't display duplicates during search
@@ -41,6 +40,21 @@ if ! zplug check; then
     zplug install
 fi
 
+# zsh-vi-mode hook: runs after vi-mode initializes keymaps
+function zvm_after_init() {
+  # Load fzf key bindings (defines fzf-history-widget)
+  if [[ -f /usr/share/doc/fzf/examples/key-bindings.zsh ]]; then
+    source /usr/share/doc/fzf/examples/key-bindings.zsh
+  fi
+
+  # Force Ctrl-R to fzf in all relevant maps
+  if (( $+functions[fzf-history-widget] )); then
+    bindkey '^R' fzf-history-widget
+    bindkey -M viins '^R' fzf-history-widget
+    bindkey -M vicmd '^R' fzf-history-widget
+  fi
+}
+
 # Load plugins
 zplug load
 
@@ -50,6 +64,9 @@ zplug load
 # Bind keys for history-substring-search
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
+setopt HIST_EXPIRE_DUPS_FIRST  # Expire duplicate entries first
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -75,3 +92,4 @@ alias ls='ls --color=auto'
 alias ll='ls -lh'
 alias la='ls -lah'
 alias grep='grep --color=auto'
+

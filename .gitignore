@@ -98,3 +98,6 @@ creative/.config/OrcaSlicer/user/
 **/.DS_Store
 **/Thumbs.db
 desktop/.config/dconf/user
+
+# Spotify
+media/.config/spotify

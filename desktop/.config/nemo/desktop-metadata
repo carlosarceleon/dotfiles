@@ -1,7 +1,7 @@
 [desktop-monitor-0]
 nemo-icon-view-keep-aligned=true
 nemo-icon-view-auto-layout=true
-nemo-icon-view-layout-timestamp=1768405568
+nemo-icon-view-layout-timestamp=1769414432
 nemo-icon-view-zoom-level=2
 
 [boot.volume]
@@ -32,7 +32,7 @@ nemo-icon-position-timestamp=1704558253
 nemo-icon-position=41,90
 monitor=0
 icon-scale=1
-nemo-icon-position-timestamp=1766178327
+nemo-icon-position-timestamp=1769414847
 
 [Linux Mint 21.2 Cinnamon 64-bit.volume]
 nemo-icon-position=41,24
@@ -86,7 +86,7 @@ nemo-icon-position-timestamp=1731765686
 nemo-icon-position=41,24
 monitor=0
 icon-scale=1
-nemo-icon-position-timestamp=1766179581
+nemo-icon-position-timestamp=1769414863
 
 [Linux Mint 22.1 Cinnamon 64-bit.volume]
 nemo-icon-position=41,90
